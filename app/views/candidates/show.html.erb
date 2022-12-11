@@ -1,0 +1,18 @@
+<div class="card bg-light">
+  <img src="https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png" style="max-width: 30%; margin: auto" class="card-img-top" alt="candidate">
+  <div class="card-body">
+    <h1 class="card-title"><%= @candidate.full_name %></h1>
+    <p class="card-text">  <%= @candidate.gender %> | <%= @candidate.age %> y.o.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> <strong>Speciality:</strong> <%=@candidate.speciality %></li>
+    <li class="list-group-item"> <strong>Work experience:</strong> <%=@candidate.work_experience %></li>
+  </ul>
+</div>
+<br/>
+<div>
+  <%= link_to "Edit", edit_candidate_path(@candidate), class:"btn btn-primary" %> 
+  <%= link_to "Back", candidates_path, class:"btn btn-light" %>
+  <br/><br/>
+  <%= button_to "Destroy", @candidate, method: :delete, class:"btn btn-danger"  %>
+</div>
